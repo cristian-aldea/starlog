@@ -55,7 +55,7 @@ params:
     Content: |
       Hi, I'm Cristian Aldea
 
-      As I travel and learn about the universe, I'll do my best to log my findings here for anyone who might need them.
+      As I travel and learn about the universe, I'll do my best to log my discoveries here for anyone who might need them.
 
       I hope you have a nice day :)
 
@@ -73,7 +73,7 @@ params:
     hiddenInSingle: false # hide on single page
 
   editPost:
-    URL: "https://github.com/cristian-aldea/starlog/blob/main"
+    URL: "https://github.com/cristian-aldea/starlog/blob/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
