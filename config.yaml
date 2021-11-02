@@ -1,0 +1,109 @@
+baseURL: "https://blog.cristianaldea.com"
+title: Starlog
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: Starlog
+  description: "Cristian Aldea's Blog"
+  keywords: [Blog, Starlog]
+  author: Cristian Aldea
+  images: ["c-logo-256.png"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "c-logo/32.png"
+    favicon16x16: "c-logo/16.png"
+    favicon32x32: "c-logo/32.png"
+    apple_touch_icon: "c-logo/256.png"
+    safari_pinned_tab: "c-logo/c-logo.svg"
+
+  label:
+    text: "Stalog"
+    icon: /c-logo/c-logo.svg
+    iconHeight: 35
+
+  homeInfoParams:
+    Title: "Welcome to ✨Starlog✨"
+    Content: |
+      Hi, I'm Cristian Aldea
+
+      As I travel and learn about the universe, I'll do my best to log my findings here for anyone who might need them.
+
+      I hope you have a nice day :)
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/cristian-aldea"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/cristianaldea"
+    - name: mail
+      url: "mailto:aldea.cristian@outlook.com"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  editPost:
+    URL: "https://github.com/cristian-aldea/starlog/blob/main"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 1
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 2
+    - identifier: example
+      name: cristianaldea.com
+      url: https://www.cristianaldea.com
+      weight: 3
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
