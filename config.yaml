@@ -46,7 +46,7 @@ params:
     safari_pinned_tab: "c-logo/c-logo.svg"
 
   label:
-    text: "Stalog"
+    text: "Starlog"
     icon: /c-logo/c-logo.svg
     iconHeight: 35
 
