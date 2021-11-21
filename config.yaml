@@ -51,11 +51,11 @@ params:
     iconHeight: 35
 
   homeInfoParams:
-    Title: "Welcome to ✨Starlog✨"
+    Title: "Welcome to ⭐Starlog⭐"
     Content: |
       Hi, I'm Cristian Aldea.
 
-      As I travel across the universe, I'll log my discoveries here to share them with everyone.
+      As I journey the stars and learn about the universe, I'll log my discoveries here, to help my fellow explorers.
 
       I hope you have a nice day :)
 
