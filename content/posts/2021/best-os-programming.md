@@ -1,7 +1,7 @@
 ---
 title: "The best operating system for programming"
 summary: "A comparison of the most popular operating systems, to help you find the best one for you."
-date: 2021-11-30T13:35:54-05:00
+date: 2021-12-04T21:00:00-05:00
 tags: ["windows", "linux", "wsl", "macOS"]
 categories: ["programming"]
 ---
@@ -66,7 +66,7 @@ However, The user experience of using Linux for desktop/laptop isn't very good. 
 
 Also, most personal computers either have Windows or macOS installed. Using Linux on your computer will probably require you to install it yourself, which isn't something most people should need to do to use a computer.
 
-### Running Linux Along with Another OS
+### Running Linux alongside another OS
 
 Despite the issue with running Linux for desktop/laptop, it can still be worth playing around with. An easy way to try Linux is to install it alongside another OS. This way, you get to learn Linux, and still have access to another, friendlier OS.
 
