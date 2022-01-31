@@ -2,7 +2,7 @@
 title: "Hugo vs. GatsbyJS"
 summary: "I'll explain my reasoning behind choosing Hugo for my blog over GatsbyJS."
 date: 2021-11-05
-lastmod: 2022-01-30
+lastmod: 2022-01-31
 tags: ["hugo", "gatsbyjs"]
 categories: ["programming"]
 ---
@@ -88,7 +88,7 @@ find public/ -type f -name '*.js' -exec du -ch -B KB {} +
 
 Hugo mostly outputs HTML code, due to the two posts I created with it. The JavaScript code is from the code block highlighting support, and can easily be removed.
 
-Gatsby mostly outputs JavaScript to make sure it can keep your pages hydrated, which as I explained earlier isn't something my project would benefit much from.
+Gatsby outputs a lot of JavaScript to hydrate your pages, as much as any React app. Having so much JavaScript will force whoever visits your website to download it all. Also, running JavaScript is much more expensive for the browser than rendering a static page through HTML and CSS. Modern computers are incredibly fast, but it's still ideal to deploy as little JavaScript as you need, to make your website as lightweight and accessible as possible. As I explained earlier, my blog wouldn't be very dynamic, so I would be stuck with all this bloat without any meaningful upside.
 
 ## Learning Curve
 
@@ -104,7 +104,7 @@ The article has an obvious risk of being biased, since it's published and contro
 
 - they compare the products by "Feature Availability", which is hard to qualify when they don't explain the reasoning behind the ratings
 - they list very few losing comparisons, as if Gatsby is ideal/perfect in most situations
-- they claim that Hugo has poor "Modern JavaScript syntax" support, which is strange. Hugo was long supported [ESBuild](https://gohugo.io/hugo-pipes/js), which, allows you to bundle your modern Javascript code and keep it compatible with older browsers
+- they claim that Hugo has poor "Modern JavaScript syntax" support, which is strange. Hugo was long supported [ESBuild](https://gohugo.io/hugo-pipes/js), which, allows you to bundle your modern JavaScript code and keep it compatible with older browsers
 - they list redundant points, such as having excellent "Componentization", "Component libraries" and "Component ecosystem"
 - they add "Swag store" as one of the upsides of Gatsby, which is _hilarious_ for an article that is ostensibly comparing the merit of various JAMstack frameworks
 
