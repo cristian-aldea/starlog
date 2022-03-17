@@ -1,7 +1,7 @@
 ---
 title: "The best operating system for programming"
 summary: "A comparison of the most popular operating systems, to help you find the best one for you."
-date: 2021-12-04T21:00:00-05:00
+date: 2021-12-04
 lastmod: 2022-03-17
 tags: ["windows", "linux", "wsl", "macOS"]
 categories: ["programming"]
