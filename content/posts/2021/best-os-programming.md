@@ -2,7 +2,7 @@
 title: "The best operating system for programming"
 summary: "A comparison of the most popular operating systems, to help you find the best one for you."
 date: 2021-12-04T21:00:00-05:00
-lastmod: 2022-01-30
+lastmod: 2022-03-17
 tags: ["windows", "linux", "wsl", "macOS"]
 categories: ["programming"]
 ---
@@ -27,7 +27,7 @@ Nearly all of the server infrastructure in the world runs on Linux. This include
 
 One big difference between Windows and Unix is the **shell**. A shell is a command-line interpreter (CLI), which is a program that allows you to type text commands. It's a vital tool for many developers, since it simplifies many developer tasks, like talking to a server, automation, running programs, and so on. Popular Unix shells like `bash` and `zsh` are industry standard, and used in many companies and projects. Learning Unix can be very valuable for your career.
 
-Windows, on the other hand, doesn't offer a Unix shell. Instead, it has the "Command Prompt" program, and the newer "Powershell". They get the job done, but are very different from Unix shells, and aren't used much outside of Windows.
+Windows, on the other hand, doesn't offer a Unix shell. Instead, it has the **Command Prompt** program, and the newer **Powershell**. They get the job done, but are very different from Unix shells, and aren't used much outside of Windows.
 
 ### No package manager
 
@@ -37,9 +37,9 @@ Want Python? go to their website, download an installer, run it, and then follow
 
 Want NodeJS, MySQL or Java? Download another installer, and follow different steps to get the software installed.
 
-Installing software on Windows is tedious and inconsistent. For example, the installer might not set up your [PATH](<https://en.wikipedia.org/wiki/PATH_(variable)>) correctly, and now you can't run your software since the system can't find where it was installed.
+Installing software on Windows is tedious and inconsistent. The installer might not set up your [PATH](<https://en.wikipedia.org/wiki/PATH_(variable)>) correctly, and now you can't run your program since the system can't find where it was installed.
 
-On Linux, a program called a "package manager" is often included. It's a handy program to install popular software from official sources through a CLI or GUI. For example, on [Debian](https://en.wikipedia.org/wiki/Debian) systems, you can use `apt`:
+On Linux, a "package manager" is often included. It's a handy program to install popular software from official sources through a CLI or GUI. For example, on [Debian](https://en.wikipedia.org/wiki/Debian) systems, you can use `apt`:
 
 ```bash
 apt install python
@@ -47,37 +47,37 @@ apt install python
 
 Now you have python installed. Do you want to install anything else? It's all one click or one command away.
 
-On macOS, no package manager is available out of the box. However, [Brew](https://brew.sh) is a quality offering, and installing software with Brew is just as easy:
+On macOS, no package manager is available out of the box. However, [Brew](https://brew.sh) is a popular and high-quality package manager available for macOS. Although slow, is a high-quality offering, and installing software with it is a breeze:
 
 ```bash
 brew install python
 ```
 
-Third-party package managers for Windows, like [Chocolatey](https://chocolatey.org), have already existed for a long time. However, I can't recommend them, since they are managed by a much smaller community than Brew or `apt`, and the quality control can be lacking.
+Third-party package managers for Windows, like [Chocolatey](https://chocolatey.org), have also existed for a long time. However, I can't recommend them, since they are managed by a much smaller community than Brew, and quality control can be lacking.
 
 UPDATE: Windows has improved massively in this area in the last few years. As of writing this, [winget-cli](https://github.com/microsoft/winget-cli) is offered as the official package manager for Windows. Check it out if you're interested.
 
 ## Linux
 
-I think Linux is the ideal platform for learning to code right now.
+I think Linux is the ideal platform for learning to code as of writing this article.
 
-Popular products like MySQL, MongoDB, Java, NodeJS, C++, Docker, Kubernetes, Apache Server, Nginx, Ruby, etc. all have Linux as the main target. if there's a server running important software, it's probably running Linux. This makes it the ideal OS for learning to code, since learning Linux will help you when you will be deploying professional applications to your clients.
+Popular products like MySQL, MongoDB, Java, NodeJS, C++, Docker, Kubernetes, Apache Server, Nginx, Ruby, etc. all have Linux as their main platform. if there's a server running important software, that software is probably run on Linux. This makes it the ideal OS for learning to code, since learning Linux will help you when you will be deploying professional applications to your clients.
 
 Linux is fast. It has very little overhead and uses very little CPU and memory compared to Windows. It's also free and open-source, making it easy for anyone to get a copy of Linux, or to have a look at the source code.
 
-Despite Linux being used almost universally for servers, it's a poor choice for a personal computer. The community using Linux like this is very small and fragmented, and software support for basic things (Adobe, Microsoft Office, OneDrive, video games, etc.) can be lacking, since there's no backing by a large company like Microsoft or Apple.
+Despite Linux being used almost universally for servers, it's a poor choice for a personal computer. The community using Linux like this is very small and fragmented, and software support for basic things (Adobe, Microsoft Office, OneDrive, video games, etc.) can be lacking, since Linux isn't very popular as an OS for personal computers.
 
-Also, most personal computers either have Windows or macOS installed. Using Linux on your computer will probably require you to install it yourself, which isn't something most people should need to do to use a computer.
+Also, most personal computers either have Windows or macOS installed. Using Linux on your computer will probably require you to install it yourself, which isn't something most people should have to do to use a computer.
 
 ### Running Linux alongside another OS
 
-Despite the issue with running Linux for desktop/laptop, it can still be worth playing around with. An easy way to try Linux is to install it alongside another OS. This way, you get to learn Linux, and still have access to something friendlier.
+Despite the issues with running Linux for desktop/laptop, it can still be worth playing around with. An easy way to try it is to install it alongside another OS. This way, you get to learn Linux, and still have access to something friendlier.
 
 #### Virtual Machine
 
-An easy way to try Linux is to run it in a virtual machine (VM). This allows you to try Linux in its own separate environment, without affecting your current machine in any way. You can then safely remove the VM if you don't need it anymore.
+An easy way to try Linux is to run it in a virtual machine (VM). This allows you to try Linux in its own isolated space, without affecting your current machine in any way. You can then safely remove the VM if you don't need it anymore.
 
-However, VMs are slow, and force you to split resources between your host, and your VM.
+However, VMs are slow, and force you to split resources between your host and your VM.
 
 #### Windows Subsystem for Linux (WSL)
 
@@ -85,7 +85,7 @@ This option, exclusive to Windows, allows you to install Linux and run it alongs
 
 I think this is a great option for things like web development and non-GUI application development. It's very useful and makes Windows a powerful option for developers.
 
-However, WSL runs Linux in what you could call a "headless" mode. There is no Linux "GUI" you can access to run your Linux programs, and the only way you can talk with the Linux subsystem is through a CLI, through networking, or the file system. This makes things like OpenGL or game development impossible or impractical on WSL.
+However, WSL runs Linux in a way that I'd describe as "headless". There is no Linux "GUI" you can access to run your Linux programs, and the only way you can talk with WSL is through a CLI, through networking, or the file system. This makes things like OpenGL or game development impossible or impractical on WSL.
 
 See the [official documentation](https://docs.microsoft.com/en-us/windows/wsl/install) if you're using Windows and want to get started with WSL.
 
@@ -95,7 +95,7 @@ With Dual Boot, you install two or more operating systems on separate parts of y
 
 This gives you the most uncompromised way to run Linux alongside another OS, without virtualization or splitting resources.
 
-However, I would not recommend doing this unless you know what you are doing. Dual-booting can be dangerous, and you could lose all of your files. Also, dual-booting isn't well supported by Windows, and you will run into issues that require you to tinker and waste time maintaining your system.
+However, I would not recommend doing this unless you know what you are doing. Dual-booting can be dangerous, and you could lose all of your files (make a backup!). Also, dual-booting isn't well supported by Windows, and you will run into issues that require you to tinker and waste time maintaining your system.
 
 ## macOS
 
@@ -105,7 +105,7 @@ macOS is stable, fast, Unix-based, and requires minimal tinkering to get started
 
 However, for all these perks, you pay a price. Apple devices are **expensive**. A Mac will cost you much more than a Windows or Linux machine with equivalent power.
 
-Also, macOS isn't well suited for certain things, like game development or machine learning, since the hardware is limited to what Apple offers.
+Also, macOS isn't well suited for certain heavy workloads, like game development or machine learning, since Macbooks tend to be slim, stylish, and lack the raw power of other options.
 
 ## Summary
 
@@ -118,8 +118,8 @@ I hope you've enjoyed reading this, and that you'll find my tips useful in findi
 ### Windows
 
 - **Pros**
-  - Versatile, capable of running software on many different device configurations
-  - WSL is an easy way to nicely integrate Linux alongside your Windows computer
+  - Versatile, capable of running software on many different kinds of devices
+  - WSL is an easy way to integrate Linux alongside your Windows computer
   - A very good option for game or UWP development
 - **Cons**
   - Not Unix based, unlike Linux and macOS
@@ -129,11 +129,11 @@ I hope you've enjoyed reading this, and that you'll find my tips useful in findi
 
 - **Pros**
   - Almost all developer software is made to run well on Linux servers
-  - A great learning opportunity, since Linux is widely used to run critical software all around the world
+  - A great platform to learn and tinker in
   - Can easily be installed alongside other operating systems
   - free (and open-source 👀)
 - **Cons**
-  - Poor user experience on personal computers due to the small, fragmented community
+  - Poor user experience on personal computers, Linux is mainly popular as a server OS, not a personal computer OS
   - Might require a lot of tinkering to get things working
 
 ### macOS
@@ -145,4 +145,4 @@ I hope you've enjoyed reading this, and that you'll find my tips useful in findi
 - **Cons**
   - Apple machines are expensive 💸
   - No native package manager, you need to install Brew or other similar software
-  - Not well suited for workloads like game development or machine learning
+  - Not well suited for heavy workloads

@@ -2,7 +2,7 @@
 title: "Hugo vs. GatsbyJS"
 summary: "I'll explain my reasoning behind choosing Hugo for my blog over GatsbyJS."
 date: 2021-11-05
-lastmod: 2022-01-31
+lastmod: 2022-03-17
 tags: ["hugo", "gatsbyjs"]
 categories: ["programming"]
 ---
@@ -20,22 +20,20 @@ First, my biggest issue with Gatsby was the build times. Builds with Hugo are mu
 To be precise, I did some benchmarks of the build times between Hugo and Gatsby (taken from the logs), and summarized everything in the table below. I compared the following projects:
 
 - **Starlog**: created with Hugo, with two posts and a theme
-- **Gatsby**: a Gatsby project created using `npm init gatsby`, with no posts
+- **Blank Gatsby**: a Gatsby project created using `npm init gatsby`, with no posts
 - **Gatsby blog starter**: a Gatsby project using the official [Gatsby blog starter](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog/), with no posts
 
-| Metric                    | Starlog | Gatsby  | Gatsby blog starter |
-| :------------------------ | :-----: | :-----: | :-----------------: |
-| Initial development build | 0.037s  | 13.156s |       14.622s       |
-| Rebuild on code change    | 0.008s  | 0.197s  |       0.293s        |
-| Production build          | 0.061s  | 23.967s |       31.349s       |
+| Metric                    | Starlog | Blank Gatsby | Gatsby blog starter |
+| :------------------------ | :-----: | :----------: | :-----------------: |
+| Initial development build | 0.037s  |   13.156s    |       14.622s       |
+| Rebuild on code change    | 0.008s  |    0.197s    |       0.293s        |
+| Production build          | 0.061s  |   23.967s    |       31.349s       |
 
-The difference is **very clear**. With Hugo, the builds felt **instantaneous**, while with Gatsby, the builds felt much slower.
+The difference is **substantial**. With Hugo, the builds felt **instantaneous**, while with Gatsby, the builds felt much slower.
 
-Gatsby has a build cache, but even with this Gatsby's builds weren't even close to Hugo's.
+However, the biggest pain point was Gatsby's rebuilds on code changes. Despite what the logs say, it felt like it took a second or two for me to see the changes in the browser after making changes in Gatsby.
 
-However, the biggest annoyance was Gatsby's rebuilds on code changes. Despite what the logs say, it would take a second or two for me to see the changes in the browser.
-
-Keep in mind that the Gatsby build times were for projects with **no posts**. As you add plugins and posts the build time can get much longer.
+Keep in mind that the Gatsby build times were for projects with **no posts**. As you add plugins and posts the build time can get **much** longer.
 
 ### Why is Hugo faster?
 
@@ -58,13 +56,13 @@ Gatsby is a clever framework with a lot of cool features:
 
 It blends the best of both worlds, keeping the performance of a static website, while allowing for the dynamic rendering of a single-page application.
 
-However, my blog will be serving mostly static content, and wouldn't benefit much from using React or Gatsby.
+However, my blog will be serving mostly static content, and wouldn't benefit much from the strengths of React or Gatsby.
 
 ## npm Bloat
 
-Using Gatsby and npm leads to a lot of bloat. npm projects can be hard to maintain, since you rely on countless packages. When you revisit an npm project after a while, you'll often find that packages you relied on are outdated or abandoned, and that updating them can lead to breaking changes and complications.
+Using Gatsby and npm leads to a lot of bloat. npm projects can be hard to maintain, since you rely on countless packages maintained by thousands of contributors. When you revisit an npm project after a while, you'll often find that packages you relied on are outdated or abandoned, and that updating them can lead to breaking changes and the need to migrate your code.
 
-For something as simple as a blog that I would update from time to time, using Hugo felt like a better fit.
+I wanted to minimize how many dependencies I had for this simple project. With Hugo, all I needed was the Hugo CLI and a theme, which is just a collection of templates that I can remove or overwrite as I please.
 
 ## A lot of JavaScript
 
@@ -80,41 +78,43 @@ find public/ -type f -name '*.html' -exec du -ch -B KB {} +
 find public/ -type f -name '*.js' -exec du -ch -B KB {} +
 ```
 
-| Metric             | Starlog | Gatsby | Gatsby blog starter |
-| :----------------- | :-----: | :----: | :-----------------: |
-| HTML Content       |  152kB  |  17kB  |        201kB        |
-| JS Content         |  123kB  | 283kB  |        345kB        |
-| Total Website Size |  459kB  | 1139kB |       3597kB        |
+| Metric             | Starlog | Blank Gatsby | Gatsby blog starter |
+| :----------------- | :-----: | :----------: | :-----------------: |
+| HTML Content       |  152kB  |     17kB     |        201kB        |
+| JS Content         |  123kB  |    283kB     |        345kB        |
+| Total Website Size |  459kB  |    1139kB    |       3597kB        |
 
-Hugo mostly outputs HTML code, due to the two posts I created with it. The JavaScript code is from the code block highlighting support, and can easily be removed.
+Hugo mostly outputs HTML code. The JavaScript code is from the code block highlighting support, and can easily be removed.
 
-Gatsby outputs a lot of JavaScript to hydrate your pages, as much as any React app. Having so much JavaScript will force whoever visits your website to download it all. Also, running JavaScript is much more expensive for the browser than rendering a static page through HTML and CSS. Modern computers are incredibly fast, but it's still ideal to deploy as little JavaScript as you need, to make your website as lightweight and accessible as possible. As I explained earlier, my blog wouldn't be very dynamic, so I would be stuck with all this bloat without any meaningful upside.
+Although JavaScript is very powerful and flexible, it's also the most expensive thing to ship to the browser. Every new byte of JavaScript you send to a browser takes much more time and energy to process than HTML or CSS, which are simple to parse and execute.
 
-## Learning Curve
+If you don't need JavaScript, then you shouldn't use it. This will lead to your websites being slimmer and snappier on older or mobile devices.
 
-I was already very familiar with JavaScript, npm, and React when I decided to create a blog, and Gatsby plays well with people who already have these skills. Hugo, on the other hand, [has a templating engine](https://gohugo.io/templates/introduction) that I didn't know very well.
+## Simplicity
 
-Despite this, I found that learning Hugo was easier for me than learning Gatsby, due to the sheer amount of configuration and plugins Gatsby offers.
+I was already very familiar with JavaScript, npm, and React when I decided to create Starlog. Gatsby would have been a good fit considering my skills. Hugo, on the other hand, [has a templating engine](https://gohugo.io/templates/introduction) that I didn't know very well.
+
+Despite this, I found that learning Hugo was easier for me than learning Gatsby, due to how much more complicated the Gatsby ecosystem is, with the seemingly endless choices it offers in terms of plugins and configuration.
 
 ## Self-congratulating
 
 While researching the pros and cons of Hugo and Gatsby, something that annoyed me was an article from Gatsby [comparing JAMstack technologies](https://www.gatsbyjs.com/features/jamstack/).
 
-The article has an obvious risk of being biased, since it's published and controlled by Gatsby. On top of that, the content of the article was less than helpful:
+The "review" article has an obvious conflict of interest, since it's published and controlled by Gatsby. Despite this, some of the points covered in the article are laughable:
 
-- they compare the products by "Feature Availability", which is hard to qualify when they don't explain the reasoning behind the ratings
-- they list very few losing comparisons, as if Gatsby is ideal/perfect in most situations
-- they claim that Hugo has poor "Modern JavaScript syntax" support, which is strange. Hugo was long supported [ESBuild](https://gohugo.io/hugo-pipes/js), which, allows you to bundle your modern JavaScript code and keep it compatible with older browsers
-- they list redundant points, such as having excellent "Componentization", "Component libraries" and "Component ecosystem"
-- they add "Swag store" as one of the upsides of Gatsby, which is _hilarious_ for an article that is ostensibly comparing the merit of various JAMstack frameworks
+- they compare the products on very generic criteria, without explaining how they reached the scores they got
+- they list very few losing comparisons, making Gatsby seem like the ideal/perfect solution in most situations
+- they claim that Hugo has poor "Modern JavaScript syntax" support, which is strange. Hugo has long supported [ESBuild](https://gohugo.io/hugo-pipes/js), which allows you to bundle and transpile your JavaScript code to keep it compatible with older browsers
+- they list redundant points, such as having excellent "Componentization", "Component libraries" and "Component ecosystem". Hugo templates can also be organized into components and reused, so this is a weird point.
+- they add "Swag store" as one of the upsides of Gatsby, as if that would matter when trying to develop a blog 👀
 
-This doesn't affect my appreciation of Gatsby as a project, but it did put a dent in my impression of the company that published this article
+This doesn't affect my appreciation of Gatsby as a project, but it did put a dent in my impression of the company.
 
 ## Conclusion
 
-Although Gatsby is a great project, I didn't think it was a good fit for my blog since I wasn't going to leverage its strengths, and its downsides were too annoying to me.
+Although Gatsby is a great project, I didn't think it was a good fit for this project. I wasn't going to leverage its strengths, and its downsides were too annoying to me.
 
-If you feel like the downsides I listed wouldn't be a deal-breaker for your project, feel free to pick up Gatsby and try it out.
+If you feel like the downsides I listed wouldn't be a deal-breaker for you, feel free to pick up Gatsby and try it out, I had a lot of fun while trying it out.
 
 For now, I'll be using Hugo. But that might very well change in the future.
 
