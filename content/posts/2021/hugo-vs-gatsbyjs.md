@@ -3,8 +3,8 @@ title: "Hugo vs. GatsbyJS"
 summary: "I'll explain my reasoning behind choosing Hugo for my blog over GatsbyJS."
 date: 2021-11-05
 lastmod: 2022-04-21
-tags: ["hugo", "gatsbyjs"]
-categories: ["programming"]
+tags: ["programming", "hugo", "gatsbyjs"]
+categories: []
 ---
 
 When I decided to create a blog, I knew I needed a static site generator. While researching, I found many popular options listed on websites like [jamstack.org](https://jamstack.org/generators), and narrowed down my choices to [GatsbyJS](https://www.gatsbyjs.com/) or [Hugo](https://gohugo.io/).

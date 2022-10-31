@@ -97,9 +97,9 @@ menu:
       name: Tags
       url: /tags/
       weight: 2
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    # - identifier: categories
+    #   name: Categories
+    #   url: /categories/
       weight: 3
     - identifier: example
       name: cristianaldea.com
