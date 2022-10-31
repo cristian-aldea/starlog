@@ -4,7 +4,7 @@ summary: "A more personal exploration of issues I've been going through recently
 date: 2022-03-17
 lastmod: 2022-04-21
 tags: ["personal"]
-categories: ["personal"]
+categories: []
 ---
 
 Fair warning, this post will cover a topic that's heavy and personal. I'm writing this to articulate something that's been on my mind for a few weeks, and to help anyone who might be going through something similar.

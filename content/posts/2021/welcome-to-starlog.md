@@ -4,7 +4,7 @@ summary: "I'll explain what Starlog is and link the source code if anyone wants 
 date: 2021-11-01
 lastmod: 2022-01-30
 tags: ["starlog", "hugo"]
-categories: ["starlog"]
+categories: []
 ---
 
 Hello!

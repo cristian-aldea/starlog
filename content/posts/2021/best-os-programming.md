@@ -3,8 +3,8 @@ title: "The best operating system for programming"
 summary: "A comparison of the most popular operating systems, to help you find the best one for you."
 date: 2021-12-04
 lastmod: 2022-04-21
-tags: ["windows", "linux", "wsl", "macOS"]
-categories: ["programming"]
+tags: ["programming", "windows", "linux", "wsl", "macOS"]
+categories: []
 ---
 
 Programming is hard work. Having the right operating system (OS) can lead to less hassle, and less time wasted on troubleshooting problems.
