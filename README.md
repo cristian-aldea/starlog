@@ -8,6 +8,12 @@ It uses [Hugo](https://gohugo.io) and is based on the excellent [Papermod](https
 
 To be able to work on this project, you will need [to install Hugo](https://gohugo.io/getting-started/installing).
 
+Then, you'll need to resolve this project's submodules:
+
+```bash
+git submodule update --init
+```
+
 ## Deployment
 
 to deploy this website, you can use the [deploy.sh](deploy.sh) script. It will:
