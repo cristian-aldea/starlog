@@ -73,9 +73,9 @@ params:
     hiddenInSingle: false # hide on single page
 
   editPost:
-    URL: "https://github.com/cristian-aldea/starlog/blob/main/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+    URL: "mailto:aldea.cristian@outlook.com?subject=Starlog Feedback"
+    Text: "Leave Feedback" # edit text
+    appendFilePath: false # to append file path to Edit link
 
   # for search
   # https://fusejs.io/api/options.html
@@ -111,3 +111,9 @@ outputs:
     - HTML
     - RSS
     - JSON
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
