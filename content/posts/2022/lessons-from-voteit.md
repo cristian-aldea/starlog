@@ -5,7 +5,7 @@ date: 2022-10-30T22:46:29-07:00
 lastmod: 2022-10-30T22:46:29-07:00
 tags: ["programming", "voteit", "react", "golang"]
 categories: []
-draft: true
+draft: false
 ---
 
 I'm not the best full-stack developer. I've had experience building websites for school or work, but I never went throught building a full-stack application by myself.
