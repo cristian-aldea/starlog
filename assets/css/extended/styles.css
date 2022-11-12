@@ -1,0 +1,6 @@
+img.inline-icon {
+  display: inline-block;
+  margin: 0;
+  height: 1.5rem;
+  vertical-align: baseline;
+}
