@@ -8,7 +8,7 @@ categories: []
 draft: false
 ---
 
-[VoteIt](https://voteit.cristianaldea.com) is a voting app I made. It's not a new concept, but I wanted to make a few features would bring a lot of value:
+[VoteIt](https://voteit.cristianaldea.com) is a voting app I made. It's not a new concept, but I had ideas for a few features that I thought would bring a lot of value:
 
 - You don't need to sign up
 - You don't get bombarded with ads
