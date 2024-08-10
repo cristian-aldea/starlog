@@ -67,7 +67,7 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/cristianaldea"
     - name: mail
-      url: "mailto:aldea.cristian@outlook.com"
+      url: "https://www.cristianaldea.com"
 
   cover:
     hidden: false # hide everywhere but not in structured data
