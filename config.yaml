@@ -1,5 +1,6 @@
 baseURL: "https://blog.cristianaldea.com"
 title: Starlog
+copyright: "© [Cristian Aldea](https://www.cristianaldea.com) 2024"
 paginate: 5
 theme: PaperMod
 
@@ -7,19 +8,87 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+mainsections:
+  - posts
 
 minify:
   disableXML: true
   minifyOutput: true
 
+DefaultContentLanguage: "en"
+languages:
+  en:
+    languageName: English
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Search
+          url: search/
+          weight: 1
+        - name: Tags
+          url: tags/
+          weight: 2
+        # - identifier: categories
+        #   name: Categories
+        #   url: /categories/
+        #   weight: 3
+        - identifier: website
+          name: cristianaldea.com
+          url: https://www.cristianaldea.com
+          weight: 4
+  ro:
+    languageName: "Română"
+    weight: 2
+    title: "Română"
+    taxonomies:
+      categories: categorii
+      tag: etichete
+      series: serie
+    menu:
+      main:
+        - name: Cauta
+          url: cauta/
+          weight: 1
+        - name: Etichete
+          url: etichete/
+          weight: 2
+        # - identifier: categories
+        #   name: Categories
+        #   url: categories
+        #   weight: 3
+        - identifier: website
+          name: cristianaldea.com
+          url: https://www.cristianaldea.com
+          weight: 4
+    params:
+      languageAltTitle: "Romanian"
+      description: "Blogul lui Cristian Aldea"
+      homeInfoParams:
+        Title: "Bun venit la ⭐ Starlog ⭐"
+        Content: |
+          Salut! Sunt Cristian Aldea!
+
+          Acesta este blogul meu personal, unde explorez și scriu despre subiecte care mă interesează.
+
+          Lectură plăcută! :)
+      taxonomies: # idk why but this is needed to show post tags
+        categories: categorii
+        tag: etichete
+        series: serie
+
 params:
-  env: production
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Starlog
   description: "Cristian Aldea's Blog"
   keywords: [Blog, Starlog]
   author: Cristian Aldea
   images: ["c-logo-256.png"]
   DateFormat: "January 2, 2006"
+
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
@@ -55,9 +124,7 @@ params:
     Content: |
       Hi, I'm Cristian Aldea!
 
-      This is my personal blog where I write polished posts exploring various topics that interest me.
-
-      I hope you'll find my content interesting and informative.
+      This is my personal blog, where I explore and write about topics that interest me.
 
       Happy reading :)
 
@@ -89,31 +156,12 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
-menu:
-  main:
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 1
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 2
-    # - identifier: categories
-    #   name: Categories
-    #   url: /categories/
-      weight: 3
-    - identifier: example
-      name: cristianaldea.com
-      url: https://www.cristianaldea.com
-      weight: 4
 
 outputs:
   home:
     - HTML
     - RSS
     - JSON
-
 
 markup:
   goldmark:
