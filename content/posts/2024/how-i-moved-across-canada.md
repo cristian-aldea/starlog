@@ -2,7 +2,7 @@
 title: "How I Moved Across Canada"
 summary: "I go over the process for my relocation to Vancouver."
 date: 2024-08-09
-lastmod: 2024-08-09
+lastmod: 2024-09-30
 tags: ["vancouver", "personal", "relocation"]
 categories: []
 ---
@@ -47,8 +47,8 @@ I initially packed just the necessities to help with moving, and then shipped or
 Once I had a new address, I had to update my home address to a bunch of services:
 
 - 🏢 my employer
-- 🍁the government (provincial and federal)
-- 🏦banks
+- 🍁 the government (provincial and federal)
+- 🏦 banks
 - and other online services I use
 
 I also had to book some appointments to get ID and documentation as a BC resident. If you're moving somewhere you'll likely be able to find resources on the matter, such as [Moving to British Columbia from within Canada](https://www2.gov.bc.ca/gov/content/tourism-immigration/moving-bc-a).
