@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Programming on Starlog</title>
+    <link>https://blog.cristianaldea.com/tags/programming/</link>
+    <description>Recent content in Programming on Starlog</description>
+    <image>
+      <title>Starlog</title>
+      <url>https://blog.cristianaldea.com/c-logo-256.png</url>
+      <link>https://blog.cristianaldea.com/c-logo-256.png</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <copyright>Cristian Aldea 2024</copyright>
+    <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.cristianaldea.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lessons From Voteit</title>
+      <link>https://blog.cristianaldea.com/posts/2022/lessons-from-voteit/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://blog.cristianaldea.com/posts/2022/lessons-from-voteit/</guid>
+      <description>Sharing what I learned from developing VoteIt!</description>
+    </item>
+    <item>
+      <title>The best operating system for programming</title>
+      <link>https://blog.cristianaldea.com/posts/2021/best-os-programming/</link>
+      <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://blog.cristianaldea.com/posts/2021/best-os-programming/</guid>
+      <description>A comparison of the most popular operating systems, to help you find the best one for you.</description>
+    </item>
+    <item>
+      <title>Hugo vs. GatsbyJS</title>
+      <link>https://blog.cristianaldea.com/posts/2021/hugo-vs-gatsbyjs/</link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://blog.cristianaldea.com/posts/2021/hugo-vs-gatsbyjs/</guid>
+      <description>I&amp;rsquo;ll explain my reasoning behind choosing Hugo for my blog over GatsbyJS.</description>
+    </item>
+  </channel>
+</rss>
