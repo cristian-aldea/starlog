@@ -4,13 +4,14 @@ git checkout main
 git branch -D gh-pages
 git checkout -b gh-pages
 
-mkdir docs
+rm -rf docs/
+mkdir docs/
 echo "blog.cristianaldea.com" > docs/CNAME
 git add docs/
 git commit -m "Create CNAME"
 
 hugo
-mv public/* docs
+cp -R public/* docs
 git add docs/
 git commit -m "Deploy website"
 
