@@ -1,8 +1,7 @@
 baseURL: "https://blog.cristianaldea.com"
 title: Starlog
-copyright: "© [Cristian Aldea](https://www.cristianaldea.com) 2024"
-paginate: 5
-theme: PaperMod
+copyright: "© [Cristian Aldea](https://www.cristianaldea.com) 2025"
+theme: [PaperMod]
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -14,6 +13,9 @@ mainsections:
 minify:
   disableXML: true
   minifyOutput: true
+
+pagination:
+  pagerSize: 5
 
 DefaultContentLanguage: "en"
 languages:
@@ -74,7 +76,7 @@ languages:
 
           Acesta este blogul meu personal, unde explorez și scriu despre subiecte care mă interesează.
 
-          Lectură plăcută! :)
+          Lectură plăcută!
       taxonomies: # idk why but this is needed to show post tags
         categories: categorii
         tag: etichete
@@ -126,7 +128,7 @@ params:
 
       This is my personal blog, where I explore and write about topics that interest me.
 
-      Happy reading :)
+      Happy reading!
 
   socialIcons:
     - name: github
